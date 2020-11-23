@@ -1,7 +1,7 @@
 <template>
 	<view v-if="width" :style="'width:'+width+';'+(square?'height:'+width:'')" class="uni-grid-item">
 		<view :class="{ 'uni-grid-item--border': showBorder,  'uni-grid-item--border-top': showBorder && index < column, 'uni-highlight': highlight }"
-		 :style="{'border-right-color': borderColor ,'border-bottom-color': borderColor ,'border-top-color': borderColor }"
+		 :style="{  'border-right-color': borderColor ,'border-bottom-color': borderColor ,'border-top-color': borderColor }"
 		 class="uni-grid-item__box" @click="_onClick">
 			<slot />
 		</view>
@@ -9,17 +9,11 @@
 </template>
 
 <script>
-	/**
-	 * GridItem 宫格
-	 * @description 宫格组件
-	 * @tutorial https://ext.dcloud.net.cn/plugin?id=27
-	 * @property {Number} index 子组件的唯一标识 ，点击gird会返回当前的标识
-	 */
 	export default {
 		name: 'UniGridItem',
 		inject: ['grid'],
 		props: {
-			index: {
+			index:{
 				type: Number,
 				default: 0
 			}
@@ -90,33 +84,23 @@
 
 	.uni-grid-item--border {
 		position: relative;
-		/* #ifdef APP-NVUE */
 		border-bottom-color: $uni-border-color;
 		border-bottom-style: solid;
-		border-bottom-width: 0.5px;
+		border-bottom-width: 1px;
 		border-right-color: $uni-border-color;
 		border-right-style: solid;
-		border-right-width: 0.5px;
-		/* #endif */
-		/* #ifndef APP-NVUE */
-		z-index: 0;
-		border-bottom: 1px $uni-border-color solid;
-		border-right: 1px $uni-border-color solid;
-		/* #endif */
-	}
-	.uni-grid-item--border-top {
-		position: relative;
-		/* #ifdef APP-NVUE */
-		border-top-color: $uni-border-color;
-		border-top-style: solid;
-		border-top-width: 0.5px;
-		/* #endif */
-		/* #ifndef APP-NVUE */
-		border-top: 1px $uni-border-color solid;
-		z-index: 0;
-		/* #endif */
+		border-right-width: 1px;
 	}
 
+	.uni-grid-item--border-top {
+		border-top-color: $uni-border-color;
+		border-top-style: solid;
+		border-top-width: 1px;
+		/* #ifndef APP-NVUE */
+		height: 100%;
+		box-sizing: border-box;
+		/* #endif */
+	}
 
 	.uni-highlight:active {
 		background-color: $uni-bg-color-hover;

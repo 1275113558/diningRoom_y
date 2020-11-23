@@ -1,14 +1,67 @@
 {
 	"pages": [{
-		"path": "pages/index/index",
+		"path": "pages/login/index",
 		"style": {
-			"navigationBarTitleText": "我是首页"
+			// "navigationBarTitleText": "登录",
+			"navigationStyle":"custom"
 		}
-	}],
+	},{
+		"path": "pages/registered/registered",
+		"style": {
+			// "navigationBarTitleText": "登录",
+			"navigationStyle":"custom"
+		}
+	}    ,{
+            "path" : "pages/phoneLogin/phoneLogin",
+            "style" :                                                                                    
+            {
+                // "navigationBarTitleText": "",
+                // "enablePullDownRefresh": false,
+				"navigationStyle":"custom"
+            }
+            
+        }
+        ,{
+            "path" : "pages/home/home",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "菜单"
+				// "navigationStyle":"default",
+				
+				
+            }
+            
+        }
+        ,{
+            "path" : "pages/foodList/foodList",
+            "style" :                                                                                    
+            {
+                "navigationStyle":"custom"
+            }
+            
+        }
+    ],
 	"globalStyle": {
-		"navigationBarTextStyle": "white",
-		"navigationBarTitleText": "uni-app",
-		"navigationBarBackgroundColor": "#007AFF",
-		"backgroundColor": "#FFFFFF"
+		
+		    // "navigationBarTitleText": "",
+		    // "enablePullDownRefresh": false,
+			"navigationStyle":"custom"
+		// "navigationBarTextStyle": "white",
+		// "navigationBarTitleText": "uni-app",
+		// "navigationBarBackgroundColor": "#007AFF",
+		// "backgroundColor": "#FFFFFF",
+		// "app-plus":{
+		// "titleNView":{
+		// //这里配置渐变，但是不起作用
+		// "backgroundImage":"linear-gradient(to right ,#e66465, #9198e5)"
+		// }
+		// }
+		// "app-plus":{
+		// "titleNView":{
+		// "backgroundColor":" #a80071"
+		// }
+		// }
+		
+		
 	}
 }

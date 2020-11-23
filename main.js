@@ -1,5 +1,7 @@
 import Vue from 'vue'
 import App from './App'
+import zhouWeiNavBar from "@/components/zhouWei-navBar";
+Vue.component("nav-bar", zhouWeiNavBar);
 
 Vue.config.productionTip = false
 

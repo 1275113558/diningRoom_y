@@ -1,5 +1,5 @@
 <script>
-export default {
+	export default {
 	onLaunch: function() {
 		console.log('App Launch');
 	},
@@ -8,7 +8,7 @@ export default {
 	},
 	onHide: function() {
 		console.log('App Hide');
-	}
+	},
 };
 </script>
 
@@ -20,4 +20,5 @@ export default {
 	src: url('/static/uni.ttf');
 }
 /* #endif */
+
 </style>
